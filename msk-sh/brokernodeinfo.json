@@ -1,0 +1,10 @@
+{
+  "InstanceType": "kafka.m5.large",
+  "ClientSubnets": [
+    "subnet-013165693776a29d9",
+    "subnet-0e58d150cfa160214"
+  ],
+  "SecurityGroups": [
+    "sg-083b9fbf31ad5dee8"
+  ]
+}

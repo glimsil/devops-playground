@@ -1,0 +1,1 @@
+aws kafka create-cluster --profile prodaccess --cluster-name "MSKPocCluster" --broker-node-group-info file://brokernodeinfo.json --kafka-version "2.2.1" --number-of-broker-nodes 2 --enhanced-monitoring PER_TOPIC_PER_BROKER --region us-east-2
