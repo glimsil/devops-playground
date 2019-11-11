@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$script = <<-script
+    echo i am provisioning
+    echo i am available at 55.55.55.5
+    date > /etc/vagrant_provisioning_at && ./hello
+script
+
+Vagrant.configure(2) do |config|
+
+    config.vm.box = "ubuntu/trusty64"
+
+    config.vm.network "private_network", ip: "55.55.55.5"
+
+    config.vm.provision "file", source: "Vagrantfile", destination: "$HOME"
+
+    config.vm.provision "file", source: "hello", destination: "$HOME/hello"
+
+    config.vm.provision "shell", inline: $script
+
+end 
